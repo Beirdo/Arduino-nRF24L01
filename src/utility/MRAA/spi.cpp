@@ -1,3 +1,4 @@
+#ifdef MRAA
 
 
 #include "spi.h"
@@ -45,3 +46,4 @@ SPI::~SPI() {
 	// Prophet: we should call end here to free used memory and unexport SPI interface
 	this->end();
 }
+#endif

@@ -3,6 +3,8 @@
  * 
  */
 
+#ifdef MRAA
+
 #include "gpio.h"
 
 GPIO::GPIO() {
@@ -81,3 +83,4 @@ void GPIO::write(int port, int value){
 		gpio_1->write( value);
 	}*/
 }
+#endif

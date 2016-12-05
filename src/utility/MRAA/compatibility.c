@@ -1,4 +1,4 @@
-
+#ifdef MRAA
 #include "compatibility.h"
 
 static struct timeval start, end;
@@ -46,3 +46,4 @@ long __millis()
     mtime = ((seconds) * 1000 + useconds/1000.0) + 0.5;	
 	return mtime;
 }
+#endif
