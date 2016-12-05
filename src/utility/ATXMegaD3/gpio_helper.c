@@ -5,6 +5,8 @@
  *  Author: akatran
  */ 
 
+#ifdef XMEGA_D3
+
 #include "gpio_helper.h"
 
 /**
@@ -43,3 +45,4 @@ PORT_t * GPIO_getPort(int pinnum, uint8_t * pin_bm)
 	return port;
 
 }
+#endif

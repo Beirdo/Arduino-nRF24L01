@@ -5,6 +5,8 @@
  *  Author: akatran
  */ 
 
+#ifdef XMEGA_D3
+
 #include <avr/io.h>
 #include "gpio_helper.h"
 #include "spi.h"
@@ -62,3 +64,4 @@ void operator delete(void * p) // or delete(void *, std::size_t)
 {
 
 }
+#endif

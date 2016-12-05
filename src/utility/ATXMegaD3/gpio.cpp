@@ -5,6 +5,8 @@
  *  Author: akatran
  */ 
 
+#ifdef XMEGA_D3
+
 //#include "gpio_helper.h"
 #include "gpio.h"
 #include <stdlib.h>
@@ -48,3 +50,4 @@ void GPIO::write(int port,int value)
 	
 }
 
+#endif

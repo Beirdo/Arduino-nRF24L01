@@ -5,6 +5,8 @@
  *  Author: akatran
  */ 
 
+#ifdef XMEGA_D3
+
 #include <avr/io.h>
 #include <stdint.h>
 #include <util/delay.h>
@@ -62,6 +64,4 @@ void update_milisec()
 	_millis++;
 }
 
-
-
-
+#endif
