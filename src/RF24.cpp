@@ -1256,7 +1256,8 @@ void RF24::disableCRC(void)
 /****************************************************************************/
 void RF24::setRetries(uint8_t delay, uint8_t count)
 {
-    write_register(SETUP_RETR, ((delay & 0x0F) << ARD) | ((count & 0x0) << ARC);
+    write_register(SETUP_RETR, ((delay & 0x0F) << ARD) |
+                               ((count & 0x0F) << ARC));
 }
 
 // vim:ts=4:sw=4:ai:et:si:sts=4
