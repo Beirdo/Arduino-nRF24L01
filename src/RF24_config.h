@@ -46,7 +46,21 @@ const uint32_t RF24_SPI_SPEED = 10000000;
 #endif
   
 #include <avr/pgmspace.h>
+
+#ifndef __arm__
 #define PRIPSTR "%S"
+#else
+#define PRIPSTR "%s"
+#define PROGMEM
+#define _BV(x) (1 << (x))
+#define printf_P printf
+#define strlen_P strlen
+#define PSTR(x) (x)
+#define pgm_read_byte(x)    (*(uint8_t *)(x))
+#define pgm_read_word(x)    (*(uint16_t *)(x))
+
+typedef uint16_t prog_uint16_t;
+#endif
 
 #endif // __RF24_CONFIG_H__
 

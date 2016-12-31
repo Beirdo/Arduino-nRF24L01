@@ -17,6 +17,8 @@
 #ifndef __PRINTF_H__
 #define __PRINTF_H__
 
+#ifndef __arm__
+
 int serial_putc(char c, FILE *)
 {
     Serial.write(c);
@@ -28,6 +30,12 @@ void printf_begin(void)
 {
     fdevopen(&serial_putc, 0);
 }
+
+#else
+
+void printf_begin(void) {}
+
+#endif
 
 #endif // __PRINTF_H__
 
